@@ -1,0 +1,145 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  --primary-color: #ff5662;
+  --primary-color-darker: #ff0013;
+  --secondary-color: #1d52ff;
+  --shadow-color: rgba(64, 64, 64, 0.7);
+  --nav-item-height: 64px;
+  --section-width: 750px;
+  --container-width: 100%;
+  --nav-container-width: 900px;
+  line-height: 1.5;
+}
+
+#container,
+nav {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#container {
+  max-width: var(--container-width);
+  position: relative;
+}
+
+nav {
+  max-width: var(--nav-container-width);
+}
+
+#nav-container {
+  box-shadow: 0 0 16px 0 var(--shadow-color);
+  margin-bottom: 48px;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  flex: 1 0 0;
+  display: flex;
+  flex-direction: row;
+}
+
+nav ul li a {
+  flex: 1 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+}
+
+nav ul li:not(:first-of-type) a {
+  color: var(--primary-color);
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+nav ul li:not(:first-of-type) a:hover,
+nav ul li:not(:first-of-type) a.active {
+  background-color: var(--primary-color);
+  color: white;
+  transition: none;
+}
+
+#nav-container,
+nav ul li {
+  height: var(--nav-item-height);
+}
+
+nav ul li img {
+  margin-left: auto;
+  margin-right: auto;
+  height: 48px;
+}
+
+#container section {
+  max-width: var(--section-width);
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 8px 0 var(--shadow-color);
+  padding: 16px;
+  margin-bottom: 32px;
+}
+
+#container .call-to-action h1 {
+  display: block;
+  background-color: var(--secondary-color);
+  margin: 0 0 8px 0;
+}
+
+#container .call-to-action {
+  box-shadow: 0 0 8px 0 var(--shadow-color);
+  position: absolute;
+  right: 64px;
+  top: 0;
+  width: 200px;
+  background-color: white;
+}
+
+#container section h1 {
+  margin: 0 0 16px 0;
+  color: white;
+  background-color: var(--primary-color);
+  padding: 12px;
+  font-size: 18px;
+  font-weight: normal;
+  display: inline-block;
+}
+
+#container section h2 {
+  margin: 0 0 16px 0;
+  color: var(--primary-color);
+  font-size: 18px;
+  display: inline-block;
+}
+
+#container section p {
+  margin: 0;
+}
+
+#container section ul {
+  margin: 0;
+}
+
+#container section p:not(:last-of-type) {
+  margin: 0 0 16px 0;
+}
+
+#container section p b {
+  color: var(--primary-color-darker);
+}
+
+@media only screen and (max-width: 1450px) {
+  #container .call-to-action {
+    right: 16px;
+    bottom: 16px;
+    top: auto;
+    margin: 0;
+    position: fixed;
+  }
+}
