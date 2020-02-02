@@ -103,6 +103,14 @@ nav ul li img {
   margin: 0 0 8px 0;
 }
 
+#container .call-to-action .kpni-link,
+.content-window .kpni-link {
+  color: var(--tertiary-color);
+  margin-top: 16px;
+  display: block;
+  opacity: 0.75;
+}
+
 #container .call-to-action {
   box-shadow: 0 0 8px 0 var(--shadow-color);
   position: absolute;
