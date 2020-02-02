@@ -170,6 +170,48 @@ nav ul li img {
   pointer-events: none;
 }
 
+ul.lectures {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul.lectures li {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  padding: 8px;
+}
+
+ul.lectures li:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.lecture-header {
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+}
+
+.lecture-header-date {
+  font-weight: normal;
+  background-color: var(--secondary-color);
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  color: white;
+  margin-right: 8px;
+}
+
+.lecture-header-location {
+  margin-left: 8px;
+}
+
+.lecture-header,
+.lecture-content,
+.lecture-pricing {
+  margin-bottom: 8px;
+}
+
 @media only screen and (max-width: 1400px) {
   #container .call-to-action {
     right: 16px;
@@ -239,6 +281,10 @@ nav ul li img {
   #nav-drawer-mobile ul li,
   #nav-drawer-mobile ul li a {
     height: 48px;
+  }
+
+  #nav-drawer-mobile ul li a {
+    white-space: nowrap;
   }
 
   #call-to-action-dialog .content-window {
