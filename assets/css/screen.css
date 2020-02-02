@@ -203,12 +203,18 @@ nav ul li img {
     background-color: rgba(0, 0, 0, 0.5);
   }
 
+  #nav-drawer-mobile.invisible nav {
+    left: 100%;
+  }
+
   #nav-drawer-mobile nav {
+    transition: left 0.3s ease;
     background-color: white;
     position: absolute;
     top: 0;
     bottom: 0;
     left: 128px;
+    overflow: hidden;
     right: 0;
     box-shadow: 0 0 16px 0 var(--shadow-color);
   }
