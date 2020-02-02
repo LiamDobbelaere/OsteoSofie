@@ -32,25 +32,54 @@
         </ul>
       </nav>
     </div>
+    <div
+      id="nav-drawer-mobile"
+      class="invisible"
+      onclick="toggleNavDrawer(event)"
+    >
+      <nav id="nav-drawer-mobile-content">
+        <ul>
+          <li>
+            <a href="#">
+              <img src="./assets/media/logo.png" alt="OsteoSofie logo" />
+            </a>
+          </li>
+          <li>
+            <a class="active" href="#">Over mij</a>
+          </li>
+          <li>
+            <a href="#">Behandelingen</a>
+          </li>
+          <li>
+            <a href="#">Indicaties</a>
+          </li>
+          <li>
+            <a href="#">Lezingen en workshops</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
     <div id="nav-container-mobile">
       <img src="./assets/media/logo.png" alt="OsteoSofie logo" />
-      <a href="#" class="call-to-action-mobile" onclick="toggleCTADialog()"
+      <a href="#" class="call-to-action-mobile" onclick="toggleCTADialog(event)"
         >Afspraak maken?</a
       >
-      <svg
-        class="menu-button"
-        xmlns="http://www.w3.org/2000/svg"
-        height="32"
-        viewBox="0 0 24 24"
-        width="32"
-      >
-        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
-      </svg>
+      <a href="#" onclick="toggleNavDrawer(event)">
+        <svg
+          class="menu-button"
+          xmlns="http://www.w3.org/2000/svg"
+          height="32"
+          viewBox="0 0 24 24"
+          width="32"
+        >
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" />
+        </svg>
+      </a>
     </div>
 
-    <div id="call-to-action-dialog" class="">
+    <div id="call-to-action-dialog" class="invisible">
       <div class="content-window">
-        <a href="#" class="close-button" onclick="toggleCTADialog()">
+        <a href="#" class="close-button" onclick="toggleCTADialog(event)">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             height="24"
@@ -168,12 +197,25 @@
     </div>
 
     <script>
-      function toggleCTADialog() {
+      function toggleCTADialog(event) {
+        event.preventDefault();
+
         document
           .getElementById("call-to-action-dialog")
           .classList.toggle("invisible");
+      }
 
-        return false;
+      function toggleNavDrawer(event) {
+        event.preventDefault();
+
+        if (["nav-drawer-mobile-content"].indexOf(event.target.id) !== -1) {
+          event.stopPropagation();
+          return;
+        }
+
+        document
+          .getElementById("nav-drawer-mobile")
+          .classList.toggle("invisible");
       }
     </script>
   </body>
