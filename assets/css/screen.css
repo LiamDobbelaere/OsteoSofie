@@ -3,6 +3,7 @@ body {
   --primary-color: #ff5662;
   --primary-color-darker: #ff0013;
   --secondary-color: #1d52ff;
+  --tertiary-color: #383b4a;
   --shadow-color: rgba(64, 64, 64, 0.7);
   --nav-item-height: 64px;
   --section-width: 750px;
@@ -150,6 +151,15 @@ nav ul li img {
   color: var(--primary-color-darker);
 }
 
+#call-to-action-dialog {
+  display: none;
+}
+
+#call-to-action-dialog.invisible {
+  opacity: 0;
+  pointer-events: none;
+}
+
 @media only screen and (max-width: 1400px) {
   #container .call-to-action {
     right: 16px;
@@ -165,6 +175,45 @@ nav ul li img {
     display: none;
   }
 
+  #call-to-action-dialog {
+    display: block;
+    position: fixed;
+    z-index: 150;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 16px;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+
+  #call-to-action-dialog .content-window {
+    padding: 8px;
+    background-color: white;
+    box-shadow: 0 0 16px 0 var(--shadow-color);
+    margin-top: 50%;
+    position: relative;
+  }
+
+  #call-to-action-dialog .close-button {
+    top: 8px;
+    right: 8px;
+    position: absolute;
+    fill: var(--tertiary-color);
+  }
+
+  #call-to-action-dialog h1 {
+    font-size: 18px;
+    color: var(--secondary-color);
+    margin: 0 0 16px 0;
+  }
+
+  #call-to-action-dialog p {
+    margin: 0;
+  }
+
   #container .call-to-action {
     display: none;
   }
@@ -173,17 +222,19 @@ nav ul li img {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     height: var(--nav-mobile-height);
-    padding: 8px;
     border-bottom: 2px solid var(--primary-color);
     position: fixed;
-    width: 100%;
+    padding: 8px;
+    top: 0;
+    left: 0;
+    right: 0;
     z-index: 100;
     background-color: white;
   }
 
-  #nav-container-mobile a {
+  #nav-container-mobile a.call-to-action-mobile {
     display: inline-block;
     background-color: var(--secondary-color);
     padding: 12px;
@@ -192,6 +243,11 @@ nav ul li img {
     color: white;
     line-height: 16px;
     text-decoration: none;
+  }
+
+  #nav-container-mobile .menu-button {
+    display: flex;
+    fill: var(--tertiary-color);
   }
 
   #container {
