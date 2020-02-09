@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/screen.css" />
+    <title>OsteoSofie</title>
+  </head>
+  <body>
+    <div id="nav-container">
+      <nav>
+        <ul>
+          <li>
+            <a href="index.html">
+              <img src="./assets/media/logo.png" alt="OsteoSofie logo" />
+            </a>
+          </li>
+          <li>
+            <a href="index.html">Over mij</a>
+          </li>
+          <li>
+            <a class="active" href="behandelingen.html">Behandelingen</a>
+          </li>
+          <li>
+            <a href="indicaties.html">Indicaties</a>
+          </li>
+          <li>
+            <a href="lezingen.html">Lezingen en workshops</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div
+      id="nav-drawer-mobile"
+      class="invisible"
+      onclick="toggleNavDrawer(event)"
+    >
+      <nav id="nav-drawer-mobile-content">
+        <ul>
+          <li>
+            <a href="index.html">
+              <img src="./assets/media/logo.png" alt="OsteoSofie logo" />
+            </a>
+          </li>
+          <li>
+            <a href="index.html">Over mij</a>
+          </li>
+          <li>
+            <a class="active" href="behandelingen.html">Behandelingen</a>
+          </li>
+          <li>
+            <a href="indicaties.html">Indicaties</a>
+          </li>
+          <li>
+            <a href="lezingen.html">Lezingen en workshops</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div id="nav-container-mobile">
+      <img src="./assets/media/logo.png" alt="OsteoSofie logo" />
+      <a href="#" class="call-to-action-mobile" onclick="toggleCTADialog(event)"
+        >Afspraak maken?</a
+      >
+      <a href="#" onclick="toggleNavDrawer(event)">
+        <svg
+          class="menu-button menu-button-marker"
+          xmlns="http://www.w3.org/2000/svg"
+          height="32"
+          viewBox="0 0 24 24"
+          width="32"
+        >
+          <path
+            class="menu-button-marker"
+            d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"
+          />
+        </svg>
+      </a>
+    </div>
+
+    <div id="call-to-action-dialog" class="invisible">
+      <div class="content-window">
+        <a href="#" class="close-button" onclick="toggleCTADialog(event)">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            height="24"
+            viewBox="0 0 24 24"
+            width="24"
+          >
+            <path
+              d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+            />
+          </svg>
+        </a>
+        <h1>Afspraak maken</h1>
+        <p>Dobbelaere Sofie</p>
+        <a href="tel:0494331183">Tel. 0494 33 11 83</a>
+        <a class="kpni-link" href="https://www.kpnicenter.com"
+          >www.kpnicenter.com</a
+        >
+      </div>
+    </div>
+
+    <div id="container">
+      <section class="call-to-action">
+        <h1>Afspraak maken?</h1>
+        <p>Dobbelaere Sofie</p>
+        <a href="tel:0494331183">Tel. 0494 33 11 83</a>
+        <a class="kpni-link" href="https://www.kpnicenter.com"
+          >www.kpnicenter.com</a
+        >
+      </section>
+
+      <section>
+        <h2>Wat is osteopathie?</h2>
+
+        <p>
+          De osteopathie is een wetenschap waarbij gebruik gemaakt wordt van
+          manuele technieken om een bewegingsverlies van om het even welk
+          weefsel te behandelen. We streven naar
+          <b>preventie en behandeling van functionele stoornissen</b> die geheel
+          of gedeeltelijk oorzaak zijn van aan het licht gebrachte disfuncties
+          van de mobiliteit.
+        </p>
+
+        <p>
+          Het menselijk lichaam wordt beschouwd als één geheel waarbij alle
+          structuren en functies met elkaar zijn verbonden. Een probleem in ons
+          lichaam zorgt niet alleen voor lokale veranderingen maar ook voor
+          veranderingen “op afstand”. Gelukkig heeft het lichaam een
+          zelfregulerend systeem en is in staat om zichzelf te genezen.
+        </p>
+
+        <p>
+          Het evenwicht van het lichaam kan worden geschaad door stress,
+          verwondingen, slechte voeding, vervuiling,...Deze schade kan leiden
+          tot ziektes.
+        </p>
+
+        <p>
+          De osteopaat
+          <b>stimuleert de zelfgenezende krachten van het lichaam</b> door
+          bewegingsverliezen van alle structuren te behandelen. De osteopaat
+          herstelt de verloren bewegingsfuncties aan de hand van 3 systemen:
+        </p>
+
+        <ul>
+          <li>Het osteo-articulair systeem <b>(botten en spieren)</b></li>
+          <li>Het visceraal systeem <b>(organen)</b></li>
+          <li>
+            Het cranio-sacraal systeem
+            <b>(schedel, samen met het heiligbeen)</b>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h1>Baby's en kinderen</h1>
+
+        <p>
+          Binnen de osteopathie worden baby’s
+          <b>NIET behandeld zoals een kleine volwassene</b>. De meeste klachten
+          bij baby’s ontstaan tijdens of net na de zwangerschap/bevalling.
+        </p>
+
+        <p>
+          Dit kan zich uiten in <b>spanningen en blokkades</b> die kunnen leiden
+          tot ongemakken of klachten zoals krampen, reflux, winderigheid,
+          huilbuien, spijsverteringsklachten, slaapproblemen,
+          voorkeurshoudingen,...
+        </p>
+
+        <p>
+          Het oplossen van deze fysieke spanningen gebeurt dmv
+          <b>ZACHTE manuele technieken en rekkingen</b>, er wordt nooit
+          “gekraakt”.
+        </p>
+
+        <p>
+          Een <b>check-up door de kinderosteopaat</b> kan kort na de geboorte
+          mogelijke problemen aan het licht brengen. Die eerste
+          controlebehandeling zorgt voor
+          <b>preventie en verlichting van klachten</b>
+          die ontstaan zijn ten gevolge van het leven in de baarmoeder en /of
+          stressvolle bevalling.
+        </p>
+      </section>
+
+      <section>
+        <h1>Myofasciale therapie en dry needling</h1>
+
+        <p>
+          Myofasciale therapie is een <b>behandelmethode voor pijn</b> die zijn
+          oorzaak vindt in een <b>verkeerd functioneren van spieren.</b>
+        </p>
+
+        <p>
+          In deze spieren kunnen er pijnpunten, of zogenaamde
+          <b>“triggerpunten” ontstaan die pijnen kunnen veroorzaken</b> met een
+          specifieke lokalisatie en uitstralingszone. Een klacht zal zich altijd
+          uiten op verschillende systemen en kan op een andere plaats tot uiting
+          komen dan waar de oorsprong ligt (dit noemen we
+          <b>“referred pain”</b>).
+        </p>
+
+        <p>
+          De therapeut
+          <b>brengt eerst in kaart welke spieren betrokken kunnen zijn</b> bij
+          de specifieke klachten en zal deze aanprikken, waardoor ook de andere
+          (neurologische, viscerale, psychologische,...) systemen positief
+          beïnvloed worden.
+        </p>
+
+        <p>
+          Dry needling is per definitie het
+          <b>inbrengen van een naald</b> volgens westerse neuro-anatomische en
+          fysiologische principes. Om extra invloed uit te oefenen op het
+          fasciaal systeem, worden ook dikwijls <b>moxa</b> en
+          <b>cupping</b> ingezet.
+        </p>
+      </section>
+
+      <section>
+        <h1>Orthomoleculaire therapie volgens de kPNI</h1>
+
+        <p>
+          De orthomoleculaire therapie volgens de klinische
+          psycho-neuro-immunologie gaat via een <b>uitgebreide anamnese</b> op
+          zoek naar de oorzaak van uw klachten.
+        </p>
+
+        <p>
+          Aan de hand van deze informatie worden er
+          <b>persoonlijke voedingsadviezen en lifestyle interventies</b>
+          uitgewerkt. In de eerste weken worden vaak nog voedingssupplementen of
+          kruiden aangeraden om een nog grotere impact te krijgen op de
+          verstoorde werkingsmechanismen van uw ziekte of aandoening.
+        </p>
+
+        <p>
+          De orthomoleculaire therapie is dus eigenlijk de basis van de
+          uiteindelijke kPNI-therapie.
+        </p>
+      </section>
+
+      <section>
+        <h1>Cosmetische acupunctuur</h1>
+
+        <p>
+          Cosmetische acupunctuur is bekend onder verschillende namen:
+          anti-aging acupunctuur, verjongingsacupunctuur, esthetische
+          acupunctuur of facial renovation acupuncture.
+        </p>
+        <p>
+          Deze vernieuwende vorm van anti-aging acupunctuur wordt aangeprezen
+          als de <b>natuurlijke facelift.</b>
+        </p>
+        <p>
+          Door het (pijnloos) aanprikken van lokale acupunctuurpunten in het
+          gezicht
+          <b>verhoog je de bloedcirculatie en collageen productie</b> van de
+          huid.
+        </p>
+
+        <p>
+          Naast deze acupunctuurstimulatie, wordt de huid ook extra behandeld
+          met een <b>innoverend apparaat</b> die via
+          <b>radiogolven en warmte</b> nog eens extra de collageen en elastine
+          productie op gang brengt. Zo worden
+          <b>directe effecten zichtbaar zonder nevenwerkingen.</b>
+        </p>
+
+        <p>
+          <b
+            >Fijne rimpels verdwijnen en diepere rimpels verminderen in
+            omvang.</b
+          >
+          Zo wordt je huid weer stevig en ziet je huid er veel gezonder uit.
+        </p>
+      </section>
+    </div>
+
+    <script type="text/javascript" src="./script.js"></script>
+  </body>
+</html>
