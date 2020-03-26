@@ -267,6 +267,8 @@ ul.lectures li:nth-child(even) {
     overflow: hidden;
     right: 0;
     box-shadow: 0 0 16px 0 var(--shadow-color);
+    display: flex;
+    flex-direction: column;
   }
 
   #nav-drawer-mobile ul {
@@ -281,6 +283,7 @@ ul.lectures li:nth-child(even) {
   #nav-drawer-mobile ul li,
   #nav-drawer-mobile ul li a {
     height: 48px;
+    flex: 1 0 auto;
   }
 
   #nav-drawer-mobile ul li a {
